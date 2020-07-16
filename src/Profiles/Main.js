@@ -22,12 +22,15 @@ class ProfilesMain extends Component {
     return this.state.loading ? (
       <Loading />
     ) : (
+      <>
+      
       <Router>
         <Switch>
           <Route path={`/profile/${StrekName()}`} component={StrekHome} />
           <Route path={`/profile/${AmrName()}`} component={AmrHome}/>
         </Switch>
       </Router>
+      </>
     );
   }
 }
