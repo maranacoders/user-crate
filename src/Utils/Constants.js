@@ -1,4 +1,4 @@
-var Constants={
-users:["harish","amaresh"]
-}
-export default Constants
+const Constants = {
+  users: ['harish', 'amaresh'],
+};
+export default Constants;

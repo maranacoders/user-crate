@@ -1,7 +1,8 @@
-import React, { Component } from "react";
-import axios from "axios";
-import Loader from "../../Loader/Loader";
-class Github_api extends Component {
+import React, { Component } from 'react';
+import axios from 'axios';
+import Loader from '../../Loader/Loader';
+
+class GithubApi extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -13,9 +14,10 @@ class Github_api extends Component {
       showRepo: true,
     };
   }
+
   componentDidMount() {
-    const { show, showRepo, username } = this.props
-    if (show == "true") {
+    const { show, showRepo, username } = this.props;
+    if (show === 'true') {
       axios
         .get(`https://api.github.com/users/${username}`)
         .then((res) => {
@@ -27,7 +29,7 @@ class Github_api extends Component {
         .catch((err) => {
           console.log(err);
         });
-      if (showRepo == "true") {
+      if (showRepo === 'true') {
         axios
           .get(`https://api.github.com/users/${username}/repos`)
           .then((res) => {
@@ -49,57 +51,67 @@ class Github_api extends Component {
   }
 
   render() {
-
-
+    const {
+      apiData, show, loader1, showRepo, loader2, repoData,
+    } = this.state;
     return (
       <>
-        {this.state.show ? (
-          this.state.loader1 ? (
+        {show ? (
+          loader1 ? (
             <Loader />
           ) : (
-              <>
-                <h2>Github Profile </h2>
-                <div>
-                  {this.state.apiData.name} <br />
-                  {this.state.apiData.html_url}
-                  <br />
-                  {this.state.apiData.public_repos}
-                  <br />
-                  <img
-                    height="100"
-                    width="100"
-                    src={this.state.apiData.avatar_url}
-                    alt="no image found"
-                  />
-                </div>
-                <div>
-                  {this.state.showRepo ? (
-                    this.state.loader2 ? (
-                      <Loader />
-                    ) : (
-                        <h2>User Repository</h2> &&
-                        this.state.repoData.map((data, id) => {
-                          return (
-                            <div key={id}>
-                              <div>Name : {data.name}</div>
-                              <div>Fork : {data.fork}</div>
-                              <div>Url : {data.html_url}</div>
-                            </div>
-                          );
-                        })
-                      )
+            <>
+              <h2>Github Profile </h2>
+              <div>
+                {apiData.name}
+                {' '}
+                <br />
+                {apiData.html_url}
+                <br />
+                {apiData.public_repos}
+                <br />
+                <img
+                  height="100"
+                  width="100"
+                  src={apiData.avatar_url}
+                  alt="user avatar"
+                />
+              </div>
+              <div>
+                {showRepo ? (
+                  loader2 ? (
+                    <Loader />
                   ) : (
-                      ""
-                    )}
-                </div>
-              </>
-            )
+                    <h2>User Repository</h2>
+                        && repoData.map((data, id) => (
+                          <div key={`item-${id}`}>
+                            <div>
+                              Name :
+                              {data.name}
+                            </div>
+                            <div>
+                              Fork :
+                              {data.fork}
+                            </div>
+                            <div>
+                              Url :
+                              {data.html_url}
+                            </div>
+                          </div>
+                        ))
+                  )
+                ) : (
+                  ''
+                )}
+              </div>
+            </>
+          )
         ) : (
-            ""
-          )}
+          ''
+        )}
       </>
     );
   }
 }
 
-export default Github_api;
+export default GithubApi;
