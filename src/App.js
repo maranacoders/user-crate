@@ -5,24 +5,20 @@ import About from './Landing/About';
 import Users from './Landing/Users';
 import Home from './Landing/Home';
 import Navbar from './Components/Navbar/Navbar';
+import ProfilesMain from './Profiles/Main';
+import FileNotFound from './Landing/Filenotfound';
 
 function App() {
   return (
     <Router>
       <div>
         <Navbar />
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
         <Switch>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/users">
-            <Users />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
+          <Route path="/about" component={About} />
+          <Route path="/users" component={Users} />
+          <Route path="/" exact component={Home} />
+          <Route path="/profile/:names" component={ProfilesMain} />
+          <Route component={FileNotFound} />
         </Switch>
       </div>
     </Router>
