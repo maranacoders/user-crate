@@ -1,14 +1,12 @@
-import React from "react";
-import logo from "./logo.svg";
-import "./App.scss";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import About from "./Landing/About";
-import Users from "./Landing/Users";
-import Home from "./Landing/Home";
-import Navbar from "./Components/Navbar/Navbar";
-import ProfilesMain from "./Profiles/Main";
-import FileNotFound from "./Landing/Filenotfound";
-
+import React from 'react';
+import './App.scss';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import About from './Landing/About';
+import Users from './Landing/Users';
+import Home from './Landing/Home';
+import Navbar from './Components/Navbar/Navbar';
+import ProfilesMain from './Profiles/Main';
+import FileNotFound from './Landing/Filenotfound';
 
 function App() {
   return (
