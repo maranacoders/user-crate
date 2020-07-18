@@ -2,7 +2,7 @@
 
 Please include a summary of the change and which issue is fixed. Please also include relevant motivation and context. List any dependencies that are required for this change.
 
-Fixes # (issue) Type the issue ID below
+Fixes # (issue) Type the issue ID below and also give the Issue Link
 
 ## Type of change
 
