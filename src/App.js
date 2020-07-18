@@ -9,6 +9,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import ProfilesMain from "./Profiles/Main";
 import FileNotFound from "./Landing/Filenotfound";
 
+
 function App() {
   return (
     <Router>
