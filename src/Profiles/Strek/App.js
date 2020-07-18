@@ -8,7 +8,7 @@ import RadialProgress from '../../Components/ProfileComponent/RadialProgress/Rad
 export const StrekHome = () => {
   return (
     <div>
-      <Github show="true" username="harish-sethuraman" showRepo="true" />
+      {/* <Github show="true" username="harish-sethuraman" showRepo="true" />
       <Stackoverflow show="true" userid="8780399" />
       <ProgressBar type="aqua" text="HTML" level="90" />
       <ProgressBar type="copper" text="CSS" level="50" />
@@ -18,8 +18,8 @@ export const StrekHome = () => {
       <ProgressBar type="zigzag" text="JS" level="50" />
       <ProgressBar type="diamond" text="English" level="50" />
       <ProgressBar type="hearts" text="Tamil" level="50" />
-      <ProgressBar type="sparkle" text="Hindi" level="50" />
-      <RadialProgress />
+      <ProgressBar type="sparkle" text="Hindi" level="50" /> */}
+      <RadialProgress text="new" color="red" level="14"/>
     </div>
   );
 };
