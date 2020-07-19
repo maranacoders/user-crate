@@ -49,7 +49,7 @@
   },
   "lint-staged": {
     "src/**/*.{js,jsx}": [
-      "eslint"
+      "npx eslint src/**/*.js --fix"
     ],
     "./src/**/*.scss": [
       "prettier --write 'src/**/*.module.scss'"
