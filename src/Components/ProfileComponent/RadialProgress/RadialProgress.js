@@ -10,7 +10,7 @@ class RadialProgress extends Component {
         .getAttribute('data-percent'),
       10,
     );
-    if (360 * (percent / 100) > 50) {
+    if (percent > 50) {
       document
         .querySelector(`.${Styles.ProgressPieChart}`)
         .classList.add(Styles.gt50);
