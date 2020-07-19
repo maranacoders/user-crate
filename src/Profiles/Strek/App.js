@@ -18,6 +18,8 @@ export const StrekHome = () => (
     <ProgressBar type="hearts" text="Tamil" level="50" />
     <ProgressBar type="sparkle" text="Hindi" level="50" />
     <RadialProgress text="new" color="red" level="14" />
+    <RadialProgress text="new" color="blue" level="14" />
+
   </div>
 );
 export const StrekName = () => 'harish';
