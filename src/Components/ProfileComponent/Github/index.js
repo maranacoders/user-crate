@@ -83,22 +83,22 @@ class GithubApi extends Component {
                     <Loader />
                   ) : (
                     <h2>User Repository</h2>
-                        && repoData.map((data, id) => (
-                          <div key={`item-${id}`}>
-                            <div>
-                              Name :
-                              {data.name}
-                            </div>
-                            <div>
-                              Fork :
-                              {data.fork}
-                            </div>
-                            <div>
-                              Url :
-                              {data.html_url}
-                            </div>
-                          </div>
-                        ))
+                    && repoData.map((data, id) => (
+                      <div key={`item-${id}`}>
+                        <div>
+                          Name :
+                          {data.name}
+                        </div>
+                        <div>
+                          Fork :
+                          {data.fork}
+                        </div>
+                        <div>
+                          Url :
+                          {data.html_url}
+                        </div>
+                      </div>
+                    ))
                   )
                 ) : (
                   ''

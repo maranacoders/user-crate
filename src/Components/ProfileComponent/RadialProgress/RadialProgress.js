@@ -7,19 +7,24 @@ class RadialProgress extends Component {
     const percent = parseInt(
       document
         .querySelector(`.${Styles.ProgressPieChart}`)
-        .getAttribute('data-percent'),10
+        .getAttribute('data-percent'),
+      10,
     );
-    console.log(percent);
-    console.log((360 * percent) / 100);
     if (360 * (percent / 100) > 50) {
       document
         .querySelector(`.${Styles.ProgressPieChart}`)
         .classList.add(Styles.gt50);
-        document.querySelector('.'+Styles.gt50).style.backgroundColor=color
+      document.querySelector(`.${Styles.gt50}`).style.backgroundColor = color;
     }
-    document.querySelector(`.${Styles.PpcProgressFill}`).style.transform = `rotate(${(360 * percent) / 100}deg)`;
-    document.querySelector('.'+Styles.PpcProgressFill).style.backgroundColor=color
-    document.querySelector(`.${Styles.PpcPercents} span`).innerHTML = `${percent}%`;
+    document.querySelector(
+      `.${Styles.PpcProgressFill}`,
+    ).style.transform = `rotate(${(360 * percent) / 100}deg)`;
+    document.querySelector(
+      `.${Styles.PpcProgressFill}`,
+    ).style.backgroundColor = color;
+    document.querySelector(
+      `.${Styles.PpcPercents} span`,
+    ).innerHTML = `${percent}%`;
   }
 
   render() {

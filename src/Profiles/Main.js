@@ -12,7 +12,7 @@ class ProfilesMain extends Component {
   }
 
   componentDidMount() {
-    let { match, history } = this.props;
+    const { match, history } = this.props;
     const route = match.url;
     console.log(route.slice(9, route.length));
     if (Constants.default.users.includes(route.slice(9, route.length))) {
@@ -24,7 +24,7 @@ class ProfilesMain extends Component {
   }
 
   render() {
-    const {loading}=this.state;
+    const { loading } = this.state;
     return loading ? (
       <Loading />
     ) : (
