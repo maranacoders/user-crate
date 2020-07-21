@@ -1,8 +1,8 @@
 import React from 'react';
 import Github from '../../Components/ProfileComponent/Github';
 import Stackoverflow from '../../Components/ProfileComponent/Stackoverflow';
-import ProgressBar from '../../Components/ProfileComponent/ProgressBar/ProgressBar';
-import RadialProgress from '../../Components/ProfileComponent/RadialProgress/RadialProgress';
+import ProgressBar from '../../Components/ProfileComponent/ProgressBar/index';
+import RadialProgress from '../../Components/ProfileComponent/RadialProgress/index';
 
 export const StrekHome = () => (
   <div>
@@ -19,6 +19,7 @@ export const StrekHome = () => (
     <ProgressBar type="sparkle" text="Hindi" level="50" />
     <RadialProgress text="new" color="red" level="14" />
     <RadialProgress text="new" color="blue" level="14" />
+    <RadialProgress text="new" level="14" />
 
   </div>
 );

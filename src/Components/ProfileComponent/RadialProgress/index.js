@@ -1,5 +1,5 @@
 import React from 'react';
-import Styles from './RadialProgress.module.scss';
+import Styles from './index.module.scss';
 
 const RadialProgress = ({ text, color, level }) => (
 

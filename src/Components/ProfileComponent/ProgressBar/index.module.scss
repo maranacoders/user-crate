@@ -560,3 +560,8 @@ h2 {
 a {
   color: #89310f;
 }
+
+.progress.plain .ProgressBars {
+  background-color: #8965e0;
+  box-shadow: 0 0 6px 2px rgba(255, 255, 255, 0.3) inset;
+}

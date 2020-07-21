@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import About from './Landing/About';
 import Users from './Landing/Users';
 import Home from './Landing/Home';
-import Navbar from './Components/Navbar/Navbar';
+import Navbar from './Components/Navbar/index';
 import ProfilesMain from './Profiles/Main';
 import FileNotFound from './Landing/Filenotfound';
 

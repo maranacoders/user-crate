@@ -16,7 +16,7 @@ $size: 200px;
   background-color: #e5e5e5;
   position: relative;
   &.gt50 {
-    background-color: #81ce97;
+    background-color: #8965e0;
   }
 }
 .PpcProgress {
@@ -25,7 +25,7 @@ $size: 200px;
   .PpcProgressFill {
     @include circle($size);
     clip: rect(0, #{$size/2}, $size, 0);
-    background: #81ce97;
+    background: #8965e0;
     transform: rotate(60deg);
   }
   .gt50 & {
@@ -45,7 +45,7 @@ $size: 200px;
     display: block;
     font-size: 2.6em;
     font-weight: bold;
-    color: #81ce97;
+    color: #8965e0;
   }
 }
 .PpcPercentsWrapper {
@@ -56,5 +56,5 @@ $size: 200px;
 .Text {
   font-size: 21px;
   font-weight: 800;
-  color: #81ce97;
+  color: #8965e0;
 }
