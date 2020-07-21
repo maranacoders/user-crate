@@ -30,6 +30,5 @@ const ProgressBar = ({ type, text, level }) => (
         </div>
       </div>
     </div>
-  </div>
 );
 export default ProgressBar;
