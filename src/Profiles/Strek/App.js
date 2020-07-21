@@ -6,7 +6,7 @@ import RadialProgress from '../../Components/ProfileComponent/RadialProgress/ind
 
 export const StrekHome = () => (
   <div>
-    <Github show="true" username="harish-sethuraman" showRepo="true" />
+    <Github username="harish-sethuraman" showRepo />
     <Stackoverflow show="true" userid="8780399" />
     <ProgressBar type="aqua" text="HTML" level="90" />
     <ProgressBar type="copper" text="CSS" level="50" />
@@ -20,7 +20,6 @@ export const StrekHome = () => (
     <RadialProgress text="new" color="red" level="14" />
     <RadialProgress text="new" color="blue" level="14" />
     <RadialProgress text="new" level="14" />
-
   </div>
 );
 export const StrekName = () => 'harish';
