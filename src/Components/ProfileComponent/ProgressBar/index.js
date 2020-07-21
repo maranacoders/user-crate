@@ -2,7 +2,6 @@ import React from 'react';
 import Styles from './index.module.scss';
 
 const ProgressBar = ({ type, text, level }) => (
-  <div>
     <div>
       <div className={Styles.ProgressTitle}>{text}</div>
       <div
