@@ -1,0 +1,383 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand:400,500,700&subset=latin-ext");
+
+* {
+	box-sizing: border-box !important;
+}
+a,
+a:hover {
+	text-decoration: none;
+	color: white;
+}
+svg {
+	height: 0;
+}
+.GithubProfile {
+	font-family: "Quicksand", sans-serif;
+	width: 100%;
+	width: 100%;
+	height: auto;
+	padding-top: 100px;
+	display: flex;
+	margin-bottom: 20px;
+}
+@media screen and (max-width: 768px) {
+	.GithubProfile {
+		height: auto;
+		min-height: 100vh;
+		padding-top: 100px;
+	}
+}
+.GithubProfile_Card__text {
+	width: 650px;
+}
+.GithubProfile_UserDetails {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 20px;
+	margin-top: -50px;
+}
+
+.githubRepo_Section {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	padding: 10px 25px;
+}
+.githubRepo {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px 25px;
+}
+.githubRepo_Section .githubRepo a {
+	color: black;
+	font-family: "Quicksand", sans-serif;
+	overflow: hidden;
+}
+.githubRepo > .repoChild {
+	width: 45%;
+	border: 2px solid #317dff;
+	padding: 8px 10px;
+	font-size: 17px;
+	height: 80px;
+	display: flex;
+	border-radius: 4px;
+	margin: 8px 4px;
+	transition: transform 1s ease-in-out;
+}
+.githubRepo > .repoChild:hover {
+	color: white;
+	background-color: #317dff;
+	transform: translateY(-5px) translateZ(0);
+	box-shadow: 0 24px 36px rgba(0, 0, 0, 0.11), 0 24px 46px rgba(220, 233, 255, 0.48);
+}
+
+.githubRepo_Section .pageNumberSection {
+	padding: 5px 25px;
+}
+.githubRepo_Section .pageNumberSection ul {
+	list-style-type: none;
+	display: flex;
+}
+.githubRepo_Section .pageNumberSection ul li {
+	border-radius: 4px;
+	margin: 5px;
+	background-color: lightblue;
+}
+.githubRepo_Section .pageNumberSection ul li div {
+	cursor: pointer;
+	display: block;
+	height: 30px;
+	border-radius: 4px;
+	width: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+}
+
+.icon {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	stroke-width: 0;
+	stroke: currentColor;
+	fill: currentColor;
+}
+
+.GithubProfile_Card {
+	width: 100%;
+	min-height: 460px;
+	margin: 0 auto;
+	box-shadow: 0px 8px 35px -5px rgba(13, 28, 39, 0.6);
+	background: #fff;
+	border-radius: 6px;
+	max-width: 95%;
+	position: relative;
+}
+
+.GithubProfile_Icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform: translateY(-60px);
+	width: 160px;
+	height: 160px;
+	margin: 0 auto;
+	border-radius: 50%;
+	overflow: hidden;
+	position: relative;
+	z-index: 4;
+}
+
+.GithubProfile_Icon img {
+	display: block;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	object-fit: cover;
+}
+.GithubProfile_Card__img {
+	width: 180px;
+	height: 180px;
+	border-radius: 8%;
+	overflow: hidden;
+	position: relative;
+	z-index: 4;
+	/* box-shadow: 0px 5px 45px 0px #6843ff, 0px 0px 0px 5px rgba(107, 74, 255, 0.5);*/
+	box-shadow: 0px 0px 18px 4px #baa9ff;
+	/*5px 5px 30px -5px #317dff*/
+}
+
+@media screen and (max-width: 576px) {
+	.GithubProfile_Card__img {
+		width: 120px;
+		height: 120px;
+	}
+}
+.GithubProfile_Card__img img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 8%;
+}
+.GithubProfile_Card__cnt {
+	text-align: center;
+	padding: 0 20px;
+	padding-bottom: 40px;
+	transition: all 0.3s;
+}
+.GithubProfile_Card__name {
+	font-weight: 700;
+	font-size: 24px;
+	color: #6944ff;
+	margin-bottom: 15px;
+}
+
+.GithubProfile_Card__name::first-letter {
+	text-transform: uppercase;
+}
+
+.GithubProfile_Card__txt {
+	font-size: 18px;
+	font-weight: 500;
+	color: #324e63;
+	margin-bottom: 15px;
+}
+.GithubProfile_Card__txt strong {
+	font-weight: 700;
+}
+.GithubProfile_Location {
+	display: flex;
+	align-items: center;
+	font-size: 18px;
+	font-weight: 600;
+}
+.GithubProfile_Location_Icon {
+	display: inline-flex;
+	font-size: 27px;
+	margin-right: 10px;
+}
+.GithubProfile_Card_Info {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	margin-top: 28px;
+}
+.GithubProfile_Card_Info_Item {
+	padding: 5px 15px;
+	min-width: fit-content;
+}
+
+.GithubProfile_Card_Info_Title {
+	font-weight: 700;
+	width: fit-content;
+	margin: 0 auto;
+	font-size: 27px;
+	color: #324e63;
+}
+.GithubProfile_Card_Info_Text {
+	font-weight: 500;
+	margin-top: 7px;
+}
+
+.GithubProfile_Card-ctr {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+}
+@media screen and (max-width: 576px) {
+	.GithubProfile_Card-ctr {
+		flex-wrap: wrap;
+	}
+}
+.GithubProfile_Card__button {
+	background: none;
+	border: none;
+	font-family: "Quicksand", sans-serif;
+	font-weight: 700;
+	font-size: 15px;
+	margin: 10px 15px;
+	padding: 10px 15px;
+	min-width: 140px;
+	border-radius: 4px;
+	min-height: 26px;
+	color: #fff;
+	cursor: pointer;
+	backface-visibility: hidden;
+	transition: all 0.3s;
+}
+@media screen and (max-width: 768px) {
+	.GithubProfile_Card__button {
+		min-width: 170px;
+		margin: 15px 25px;
+	}
+}
+@media screen and (max-width: 576px) {
+	.GithubProfile_Card__button {
+		min-width: inherit;
+		margin: 0;
+		margin-bottom: 16px;
+		width: 100%;
+		max-width: 300px;
+	}
+	.GithubProfile_Card__button:last-child {
+		margin-bottom: 0;
+	}
+}
+.GithubProfile_Card__button:focus {
+	outline: none !important;
+}
+@media screen and (min-width: 768px) {
+	.GithubProfile_Card__button:hover {
+		transform: translateY(-5px);
+	}
+}
+
+.GithubProfile_Card__button.button_blue_shade {
+	background-color: #317dff;
+	border-color: #317dff;
+}
+.GithubProfile_Card__button.button_blue_shade a {
+	color: white;
+}
+.GithubProfile_Card__button.button_blue_shade:hover {
+	background: #3d55df;
+	border-color: #3d55df;
+}
+
+@media only screen and (max-width: 600px) {
+	.GithubProfile_UserDetails {
+		flex-direction: column;
+		margin-top: -60px;
+	}
+	.GithubProfile_Card_Info {
+		flex-wrap: nowrap;
+	}
+	.GithubProfile_Card__txt {
+		text-align: justifys;
+	}
+	.GithubProfile_Card__text {
+		width: auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 25px;
+		flex-direction: column;
+	}
+	.GithubProfile_Card_Info_Item {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 8px;
+	}
+	.GithubProfile_Icon {
+		height: 140px;
+		width: 140px;
+	}
+	.GithubProfile_Icon img {
+		height: 130px;
+		width: 130px;
+	}
+	.githubRepo_Section {
+		padding: 4px;
+		width: 100%;
+		align-items: center;
+	}
+	.githubRepo {
+		padding: 0;
+		width: 280px;
+	}
+	.githubRepo > .repoChild {
+		width: 100%;
+		height: auto;
+		min-height: 100px;
+		padding: 10px 0 5px 5px;
+		align-items: flex-start;
+	}
+
+	.githubRepo_Section .pageNumberSection ul {
+		padding: 0;
+	}
+}
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+	.GithubProfile_UserDetails {
+		flex-direction: column;
+	}
+	.GithubProfile_Card__text {
+		width: 460px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		margin-top: 15px;
+	}
+	.githubRepo_Section {
+		padding: 4px;
+		width: 100%;
+		align-items: center;
+	}
+	.githubRepo {
+		padding: 0;
+		width: 560px;
+	}
+	.githubRepo > .repoChild {
+		width: 100%;
+	}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+	.GithubProfile_Card__text {
+		width: 480px;
+	}
+	.githubRepo > .repoChild {
+		height: 100px;
+	}
+}
