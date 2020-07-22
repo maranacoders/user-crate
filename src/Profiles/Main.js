@@ -14,7 +14,6 @@ class ProfilesMain extends Component {
   componentDidMount() {
     const { match, history } = this.props;
     const route = match.url;
-    console.log(route.slice(9, route.length));
     if (Constants.default.users.includes(route.slice(9, route.length))) {
       console.log('yes');
     } else {
