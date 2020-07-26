@@ -1,11 +1,10 @@
-/* eslint-disable */
 import styled from 'styled-components';
 import { darken } from 'polished';
 
 const defaultBgColor = '#8965e0';
 const defaultTextColor = '#fff';
 
-export const Wrapper = styled.div`
+const Wrapper = styled.div`
   display: inline-block;
   padding: 10px 15px;
   border-radius: 5px;
@@ -18,7 +17,8 @@ export const Wrapper = styled.div`
 
   &:hover,
   &:active {
-    background-color: ${(props) =>
-      darken(0.04, props.bgColor || defaultBgColor)};
+    background-color: ${(props) => darken(0.04, props.bgColor || defaultBgColor)};
   }
 `;
+
+export default Wrapper;

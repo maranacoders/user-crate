@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React from 'react';
 
 import {
@@ -15,21 +14,23 @@ import {
   Card,
 } from './hero-section.styles';
 
-const HeroSection = ({ name, title, description, links }) => (
+const HeroSection = ({
+  name, title, description, links,
+}) => (
   <Wrapper>
     <GlobalStyles />
     <Shape />
 
     <Section>
-      <Text>Hello, I'm</Text>
+      <Text>Hello, I’m</Text>
       <Heading uppercase>{name}</Heading>
       <SubHeading uppercase>{title}</SubHeading>
 
       <Button>Download Resume</Button>
 
       <LogoGroup size="30">
-        {links &&
-          links.map((link, i) => (
+        {links
+          && links.map((link, i) => (
             <a key={`link-${i}`} href={link[1] ? `${link[1]}` : '#'}>
               <Logo url={`/brands.svg#${link[0]}`} size="30" />
             </a>
@@ -37,7 +38,7 @@ const HeroSection = ({ name, title, description, links }) => (
       </LogoGroup>
     </Section>
 
-    <Card>{description}</Card>
+    {description && <Card>{description}</Card>}
   </Wrapper>
 );
 

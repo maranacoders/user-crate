@@ -39,7 +39,7 @@ export const Wrapper = styled.div`
   @import url(MonserratCDN);
 
   width: 100%;
-  min-height: 80vh;
+  min-height: 90vh;
   font-family: Montserrat, sans-serif;
   color: rgb(56, 56, 56);
 
