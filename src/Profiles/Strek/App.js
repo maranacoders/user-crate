@@ -1,8 +1,25 @@
+/* eslint-disable */
 import React from 'react';
 import Github from '../../Components/ProfileComponent/Github';
 import Stackoverflow from '../../Components/ProfileComponent/Stackoverflow';
 import ProgressBar from '../../Components/ProfileComponent/ProgressBar/index';
 import RadialProgress from '../../Components/ProfileComponent/RadialProgress/index';
+import HeroSection from '../../Components/hero-section/hero-section.component';
+
+const heroSectionData = {
+  name: 'Harish Kumar',
+  title: 'Creative Front-End Web Developer',
+  description:
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+
+  links: [
+    ['github'],
+    ['twitter'],
+    ['linkedin'],
+    ['facebook'],
+    ['google', 'https://www.google.com/'],
+  ],
+};
 
 export const StrekHome = () => (
   <div>
@@ -20,6 +37,7 @@ export const StrekHome = () => (
     <RadialProgress text="new" color="red" level="14" />
     <RadialProgress text="new" color="blue" level="14" />
     <RadialProgress text="new" level="14" />
+    {/*  <HeroSection {...heroSectionData} /> */}
   </div>
 );
 export const StrekName = () => 'harish';
