@@ -3,24 +3,7 @@
   justify-content: space-around;
   flex-wrap: wrap;
 }
-.Card {
-  position: relative;
-  height: 100px;
-  padding-right: 15px;
-  padding-left: 15px;
-  box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07) !important;
-}
-@media (max-width: 1024px) and (min-width: 768px) {
-  .Card {
-    width: 30vw;
-    flex: 0 0 30vw;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .Card {
-    width: 90vw;
-    padding-bottom: 3rem !important;
-    padding-top: 3rem !important;
-  }
+.Container {
+  margin-right: auto;
+  margin-left: auto;
 }
