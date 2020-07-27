@@ -23,6 +23,8 @@ const heroSectionData = {
 
 export const StrekHome = () => (
   <div>
+    <HeroSection {...heroSectionData} />
+
     <Github username="harish-sethuraman" showRepo />
     <Stackoverflow show="true" userid="8780399" />
     <ProgressBar type="aqua" text="HTML" level="90" />
@@ -37,7 +39,6 @@ export const StrekHome = () => (
     <RadialProgress text="new" color="red" level="14" />
     <RadialProgress text="new" color="blue" level="14" />
     <RadialProgress text="new" level="14" />
-    {/*  <HeroSection {...heroSectionData} /> */}
   </div>
 );
 export const StrekName = () => 'harish';

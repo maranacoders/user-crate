@@ -1,5 +1,5 @@
 /* eslint-disable */
-import styled, { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle, css } from 'styled-components';
 
 import SVG from '../svg/svg.component';
 import ButtonComponent from '../button/button.component';
@@ -7,6 +7,13 @@ import { ReactComponent as Triangle } from './assets/triangle.svg';
 
 const MonserratCDN =
   'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap';
+
+const maxGen = (sizeInPx) => {
+  // size = 18px => max(18px, 1.8rem)
+  const inPx = `${sizeInPx}px`;
+  const inRem = `${sizeInPx / 10}rem`;
+  return `max(${inPx}, ${inRem})`;
+};
 
 export const GlobalStyles = createGlobalStyle`
   * {
@@ -17,10 +24,20 @@ export const GlobalStyles = createGlobalStyle`
 
   :root {
       font-size: 62.5%;
-      
+
       @media (min-width: 112.5em) {
-         //1800px
-         font-size: 75%;
+        // 1800px
+        font-size: 75%;
+      }
+
+      @media (min-width: 137.5em) {
+        // 2200px
+        font-size: 90%;
+      }
+
+      @media (min-width: 150em) {
+        //2500px
+        font-size: 100%;
       }
 
       @media (max-width: 75em) {
@@ -28,7 +45,7 @@ export const GlobalStyles = createGlobalStyle`
         font-size: 56.25%;
       }
 
-     @media (max-width: 56.25em) {
+      @media (max-width: 56.25em) {
         //900px
         font-size: 50%;
       }
@@ -39,7 +56,7 @@ export const Wrapper = styled.div`
   @import url(MonserratCDN);
 
   width: 100%;
-  min-height: 80vh;
+  min-height: ${(props) => props.height || '80vh'};
   font-family: Montserrat, sans-serif;
   color: rgb(56, 56, 56);
 
@@ -51,7 +68,8 @@ export const Wrapper = styled.div`
   position: relative;
   overflow: hidden;
 
-  background-image: url('/gradients/pale-cornflower-blue.jpg');
+  background: ${(props) =>
+    props.background || `url('/gradients/pale-cornflower-blue.jpg')`};
   background-size: cover;
 
   padding: 4rem;
@@ -94,6 +112,12 @@ export const Section = styled.div`
     width: 100%;
     max-width: 100%;
   }
+
+  ${(props) =>
+    props.solo &&
+    css`
+      align-items: center;
+    `}
 `;
 
 export const Text = styled.p`
@@ -105,7 +129,7 @@ export const Text = styled.p`
 export const Heading = styled.h1`
   font-weight: 900;
   font-size: 4rem;
-  width: 14ch;
+  width: 15ch;
   margin: 0.5rem 0 1rem 0;
   line-height: 1.1;
   /* word-wrap: break-word; */
@@ -113,7 +137,7 @@ export const Heading = styled.h1`
 
   @media (max-width: 750px) {
     text-align: center;
-    width: 10ch;
+    width: 12ch;
   }
 `;
 
@@ -139,8 +163,8 @@ export const LogoGroup = styled.div`
 `;
 
 export const Logo = styled(SVG)`
-  width: ${(props) => props.size}px;
-  height: ${(props) => props.size}px;
+  width: ${(props) => maxGen(props.size)};
+  height: ${(props) => maxGen(props.size)};
   fill: ${(props) => props.color || '#303030'};
   cursor: pointer;
   transition: fill 0.2s;
@@ -156,8 +180,9 @@ export const Button = styled(ButtonComponent).attrs({
   bgColor: '#fafafa',
   textColor: 'black',
 })`
-  font-size: 15px;
+  font-size: ${maxGen(15)};
   margin: 3.2rem 0;
+  padding: 1rem 1.5rem;
 `;
 
 export const Card = styled.div`

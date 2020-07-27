@@ -15,29 +15,44 @@ import {
   Card,
 } from './hero-section.styles';
 
-const HeroSection = ({ name, title, description, links }) => (
-  <Wrapper>
-    <GlobalStyles />
-    <Shape />
+const renderLogos = (links) => {
+  return links.map((link, i) => {
+    const [brand, url] = link;
 
-    <Section>
+    const key = `link-${i}`;
+    const href = url ? `${url}` : '#';
+
+    return (
+      <a key={key} href={href}>
+        <Logo url={`/brands.svg#${brand}`} size="30" />
+      </a>
+    );
+  });
+};
+
+const HeroSection = ({
+  height,
+  background,
+  shapeOpacity,
+  name,
+  title,
+  description,
+  links,
+}) => (
+  <Wrapper background={background} height={height}>
+    <GlobalStyles />
+
+    <Shape opacity={shapeOpacity} />
+
+    <Section solo={!description}>
       <Text>Hello, I'm</Text>
       <Heading uppercase>{name}</Heading>
-      <SubHeading uppercase>{title}</SubHeading>
-
+      {title && <SubHeading uppercase>{title}</SubHeading>}
       <Button>Download Resume</Button>
-
-      <LogoGroup size="30">
-        {links &&
-          links.map((link, i) => (
-            <a key={`link-${i}`} href={link[1] ? `${link[1]}` : '#'}>
-              <Logo url={`/brands.svg#${link[0]}`} size="30" />
-            </a>
-          ))}
-      </LogoGroup>
+      <LogoGroup size="30">{links && renderLogos(links)}</LogoGroup>
     </Section>
 
-    <Card>{description}</Card>
+    {description && <Card>{description}</Card>}
   </Wrapper>
 );
 
