@@ -11,5 +11,7 @@ module.exports = {
     'no-nested-ternary': 0,
     'react/no-array-index-key': 0,
     'linebreak-style': 0,
+    'max-len':0,
+    'react/jsx-props-no-spreading':0,
   },
 };
